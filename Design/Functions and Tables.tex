@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Student Attendence System}
+\author{Sanhu Li}
+\date{September 2014}
+
+\begin{document}
+
+\maketitle
+
+\section{Functions}
+
+\subsection*{Student}
+\begin{itemize}
+	\item Add and drop classes
+	\item View attendance
+	\item View grade
+\end{itemize}
+
+\subsection*{Teacher}
+\begin{itemize}
+	\item Create a course
+	\item Give grade to the students
+	\item Start a class, end the class
+	\item View student attendance for a certain class
+\end{itemize}
+
+\section{Tables}
+\subsection*{Student}
+\begin{itemize}
+	\item student\_id string
+	\item student\_name string
+	\item student\_password string
+\end{itemize}
+
+\subsection*{Course} % (fold)
+\begin{itemize}
+	\item course\_id int
+	\item course\_department string
+	\item course\_number string
+	\item course\_section string
+	\item course\_name string
+\end{itemize}
+% subsection course (end)
+
+\subsection*{Teacher} % (fold)
+\begin{itemize}
+	\item teacher\_id string
+	\item teacher\_name string
+	\item teacher\_password string
+\end{itemize}
+% subsection teacher (end)
+
+\subsection*{StudentCourse} % (fold)
+\label{sub:studentcourse}
+\begin{itemize}
+	\item sc\_id int
+	\item student\_id string
+	\item tc\_id int
+\end{itemize}
+% subsection studentcourse (end)
+
+\subsection*{TeacherCourse} % (fold)
+\label{sub:teachercourse}
+\begin{itemize}
+	\item tc\_id int
+	\item teacher\_id string
+	\item course\_id int
+	\item cr\_id int
+	\item time string \# the format for time is something like \[[\{`weekday':`M', `start\_time':`15:55', `end\_time':`17:20'\}, \ldots]\]
+	\item semester string 
+\end{itemize}
+% subsection teachercourse (end)
+
+\subsection*{Classroom} % (fold)
+\label{sub:classroom}
+\begin{itemize}
+	\item cr\_id int
+	\item cr\_name string
+	\item cr\_file string
+\end{itemize}
+% subsection classroom (end)
+
+\subsection*{Record} % (fold)
+\label{sub:record}
+\begin{itemize}
+	\item record\_id int
+	\item tc\_id int
+	\item student\_id string
+	\item date\_time string
+\end{itemize}
+% subsection record (end)
+
+\end{document}
